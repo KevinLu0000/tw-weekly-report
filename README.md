@@ -12,6 +12,7 @@
 | `scripts/fetch_basic.py` | 下載上市櫃基本資料、估值、月營收、財報 |
 | `scripts/screen_value.py` | 價值股篩選（條件寫在程式第 8 段） |
 | `results/YYYY-MM-DD/` | 每週篩選結果 |
+| `RULES.md` | 價值股篩選規則（目前確認版） |
 
 ## 每週執行順序
 ```bash
