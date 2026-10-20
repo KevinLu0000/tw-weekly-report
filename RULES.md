@@ -66,3 +66,6 @@
 - 處置股、注意股都保留在動量名單，表格標示「處置股」或「注意股」
 - 全額交割（變更交易）股：沿用價值股規則先剔除（待確認）
 - 資料來源：上市 https://openapi.twse.com.tw/v1/announcement/punish 、 /announcement/notice ；上櫃 https://www.tpex.org.tw/openapi/v1/tpex_disposal_information 、 /tpex_trading_warning_information
+
+## 流動性（2026-10-20 確認）
+- 動量股：近 20 日平均成交值 ≥ 1 億元（每日成交股數 × 收盤價，取 20 日平均）
