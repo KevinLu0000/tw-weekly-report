@@ -15,6 +15,7 @@
 | `scripts/fetch_inst.py` | 下載近 5 日法人買賣超（日期目前寫在程式裡） |
 | `scripts/fetch_mom_extra.py` | 下載加權指數、注意股名單 |
 | `scripts/screen_momentum.py` | 動量股篩選與排名 |
+| `scripts/fetch_us.py` | 下載美股、美元、台幣、10 年期美債、油價、黃金（Yahoo 財經） |
 | `results/YYYY-MM-DD/` | 每週篩選結果 |
 | `RULES.md` | 價值股篩選規則（目前確認版） |
 
