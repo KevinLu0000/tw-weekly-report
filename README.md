@@ -17,7 +17,9 @@
 | `scripts/screen_momentum.py` | 動量股篩選與排名 |
 | `scripts/fetch_us.py` | 下載美股、美元、台幣、10 年期美債、油價、黃金（Yahoo 財經） |
 | `results/YYYY-MM-DD/` | 每週篩選結果 |
-| `RULES.md` | 價值股篩選規則（目前確認版） |
+| `RULES.md` | 所有篩選與判斷規則（目前確認版） |
+| `data/concepts/` | 非凡概念快照與產業對應表 |
+| `scripts/compact_concepts.py` | 把總控台的概念名單精簡成快照 |
 
 ## 每週執行順序
 ```bash
