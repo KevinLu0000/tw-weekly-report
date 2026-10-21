@@ -1,4 +1,4 @@
-# 每週增量更新歷史股價：只補抓「最近 400 天內、還沒有檔案」的平日
+# 每週增量更新歷史股價：只補抓「最近 375 天內（52 週＝364 天，再多留幾天）、還沒有檔案」的平日
 # 上市用證交所兩個主機輪流抓（降低被限速機率）；上櫃用櫃買中心
 # 存檔格式：data/prices/{L或O}/YYYYMMDD.json = {代號: [收盤, 最高, 最低, 成交股數]}
 import json, os, time, datetime, threading, urllib.request
@@ -39,7 +39,7 @@ URL = {
 
 def todo_days(market):
     today = datetime.date.today()
-    d, out = today - datetime.timedelta(days=400), []
+    d, out = today - datetime.timedelta(days=375), []
     while d <= today:
         if d.weekday() < 5 and not os.path.exists(f"data/prices/{market}/{d:%Y%m%d}.json"): out.append(d)
         d += datetime.timedelta(days=1)

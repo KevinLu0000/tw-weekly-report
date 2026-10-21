@@ -159,6 +159,8 @@ python3 scripts/finalize.py
 ## 六、存檔與通知
 
 1. 把文件匯出成 Markdown，存成 `R/report.md`（下週的「上週監測清單回顧」要讀它）。
+   Claude Docs 的 `export`（format=markdown）結果太大時會另存成檔案：檔案內容是 JSON，
+   `data.bytes_b64` 是 base64 編碼的 Markdown，用 Python `base64.b64decode(...).decode()` 解碼後寫入 `R/report.md`。
 2. Commit 並 push：
 
 ```bash
