@@ -2,6 +2,7 @@
 # 上市用證交所兩個主機輪流抓（降低被限速機率）；上櫃用櫃買中心
 # 存檔格式：data/prices/{L或O}/YYYYMMDD.json = {代號: [收盤, 最高, 最低, 成交股數]}
 import json, os, time, datetime, threading, urllib.request
+import common        # 載入共用設定（工作目錄切到儲存庫根目錄）
 
 def num(s):
     """'1,234.5' → 1234.5；'--' 或空白 → None"""
@@ -31,8 +32,8 @@ def parse_O(j):
     return out
 
 URL = {
-    "L": ["https://wwwc.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={ymd}&type=ALLBUT0999&response=json",
-          "https://www.twse.com.tw/exchangeReport/MI_INDEX?response=json&date={ymd}&type=ALLBUT0999"],
+    "L": ["https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={ymd}&type=ALLBUT0999&response=json",
+          "https://wwwc.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={ymd}&type=ALLBUT0999&response=json"],
     "O": ["https://www.tpex.org.tw/www/zh-tw/afterTrading/otc?date={y}/{m}/{d}&type=EW&response=json"],
 }
 

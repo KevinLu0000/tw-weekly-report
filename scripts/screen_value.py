@@ -1,11 +1,12 @@
-# 價值股初步篩選（資料截至 2026/10/16 收盤）
-# 步驟：合併各資料 → 算市值、52 週低點、TTM EPS、負債比/ROE → 依條件過濾 → 綜合評分排序
-import json, glob, statistics
+# 價值股第一階段篩選（全市場自動篩選），規則見 RULES.md「價值股篩選規則」
+# 步驟：合併各資料 → 算市值、52 週高低點、TTM EPS、負債比/ROE → 依條件過濾 → 綜合評分排序
+# 輸出：results/<本週最後交易日>/value_candidates.json（通過第一階段的股票，依價值評分排序）
+#       第二階段（現金流、單季 EPS、近三個月營收）由 stage2_prep.py → 逐檔查 → finalize.py 處理
+import statistics, datetime
+from common import *
 
-def load(n): return json.load(open(f"data/raw/{n}.json"))
-def num(s):
-    try: return float(str(s).replace(",", "").strip())
-    except: return None
+load = load_raw
+W = week_end()
 
 stocks = {}   # 代號 → 這檔股票的所有欄位
 
@@ -66,24 +67,19 @@ for m in ["L", "O"]:
             ni = num(r.get("淨利（淨損）歸屬於母公司業主"))
             if eq and ni is not None: s["roe"] = ni * 2 / eq * 100   # 上半年 ×2 年化
 
-# ---------- 6. 52 週高低點、近 20 日均量（用每日行情計算）----------
-hist = {}
-for m in ["L", "O"]:
-    for f in sorted(glob.glob(f"data/prices/{m}/*.json")):
-        day = f[-13:-5]
-        for c, v in json.load(open(f)).items():
-            hist.setdefault(c, []).append((day, *v))
-import datetime
-last_day = max(r[0] for rows in hist.values() for r in rows)          # 資料中最新的交易日
-start52 = (datetime.datetime.strptime(last_day, "%Y%m%d") - datetime.timedelta(days=364)).strftime("%Y%m%d")  # 52 週起點
+# ---------- 6. 52 週高低點、近 20 日均量（用每日行情計算，只用到 W 為止）----------
+hist = load_prices(W)
+start52 = (ymd(W) - datetime.timedelta(days=364)).strftime("%Y%m%d")  # 52 週起點
 for c, rows in hist.items():
     if c not in stocks: continue
     rows.sort()
     yr = [r for r in rows if r[0] >= start52 and r[3] is not None]
     if len(yr) < 150: continue               # 交易日太少（新上市）就不算
     s = stocks[c]
+    if rows[-1][0] == W and rows[-1][1] is not None:
+        s["close"] = rows[-1][1]             # 收盤價以 W 當天的日行情為準
     lo = min(yr, key=lambda r: r[3]); hi = max(yr, key=lambda r: r[2] or 0)
-    s.update(low52=lo[3], low52_date=lo[0], high52=hi[2], days=len(yr))
+    s.update(low52=lo[3], low52_date=lo[0], high52=hi[2], high52_date=hi[0], days=len(yr))
     vol20 = [r[4] for r in yr[-20:] if r[4]]
     s["vol20"] = statistics.mean(vol20) / 1000 if vol20 else 0   # 單位：張
 
@@ -102,6 +98,7 @@ for c, s in stocks.items():
     if c in bad: fail("處置/全額交割"); continue
     if s.get("low52") is None: fail("股價歷史不足"); continue
     s["dist"] = (s["close"] / s["low52"] - 1) * 100                       # 距 52 週低點 %
+    s["from_hi"] = (s["close"] / s["high52"] - 1) * 100                   # 距 52 週高點 %
     if s["dist"] > 15: fail("距52週低>15%"); continue
     if s.get("vol20", 0) < 500: fail("20日均量<500張"); continue
     if not s.get("pe"): fail("本益比空白(近四季EPS≤0或無資料)"); continue
@@ -127,9 +124,11 @@ for key, hg in [("pe", False), ("pb", False), ("dy", True), ("dist", False)]:
 for p in passed: p["score"] = round(sum(p[f"r_{k}"] for k in ["pe", "pb", "dy", "dist"]) / 4 * 100, 1)
 passed.sort(key=lambda p: -p["score"])
 
-print("交易日數:", len(glob.glob("data/prices/L/*.json")), len(glob.glob("data/prices/O/*.json")))
+print("本週最後交易日:", W, "；52 週起點:", start52)
 print("刷掉原因統計:", json.dumps(reasons, ensure_ascii=False))
 print("通過條件:", len(passed))
 for p in passed[:30]:
     print(p["code"], p["name"], p["mkt"], p.get("ind"), f"市值{p['mcap']:.0f}億 收{p['close']} 低{p['low52']} 距{p['dist']:.1f}% PE{p['pe']} PB{p['pb']} 殖{p['dy']} 月營收YoY{p['rev_yoy']:.1f} 負債{p.get('debt') or 0:.0f}% ROE{p.get('roe') or 0:.1f} 分{p['score']}")
-json.dump(passed, open("data/passed.json", "w"), ensure_ascii=False, indent=1)
+save_json(f"{results_dir(W)}/value_candidates.json",
+          {"end": W, "fail_reasons": reasons, "universe": sum(reasons.values()) + len(passed),
+           "count": len(passed), "stocks": passed})
