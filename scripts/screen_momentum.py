@@ -48,6 +48,9 @@ for n in ["L_rev", "O_rev"]:
 
 # ---------- 3. 外資、投信近 5 個交易日買賣超（股）----------
 inst_days = last_n_days(END, 5)
+lack = [f"{m}_{d}" for d in inst_days for m in "LO" if not os.path.exists(f"data/inst/{m}_{d}.json")]
+if lack:
+    raise SystemExit(f"缺少法人資料 {lack}，請先跑 fetch_week.py")
 fi, it = {}, {}
 for d in inst_days:
     # 上市 T86 欄位：r[4] 外資(不含自營)買賣超、r[7] 外資自營商買賣超、r[10] 投信買賣超

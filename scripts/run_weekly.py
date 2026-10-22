@@ -21,7 +21,14 @@ def run(script, *args, check=True):
 
 
 if not skip_download:
-    run("update_prices.py")
+    # 股價是所有計算的基礎：上市或上櫃缺任何一天都要補齊，最多 4 輪（每輪之間等 3 分鐘）
+    for i in range(4):
+        if run("update_prices.py", check=False) == 0:
+            break
+        if i == 3:
+            raise SystemExit("股價資料連續 4 輪都補不齊（見上方「股價資料不完整」），請稍後重跑 run_weekly.py")
+        print(f"第 {i + 1} 輪股價不完整，3 分鐘後重試", flush=True)
+        time.sleep(180)
     run("fetch_basic.py")
     # 證交所常限速：有失敗項目就等 2 分鐘再跑一次（已抓到的會自動跳過），最多 3 輪
     for i in range(3):
@@ -31,6 +38,9 @@ if not skip_download:
             break
         print(f"第 {i + 1} 輪仍有失敗：{failed}，2 分鐘後重試", flush=True)
         time.sleep(120)
+    if any(f.startswith("個股法人買賣超") for f in failed):
+        # 動量股門檻需要每天的法人資料，缺一天就算不準，所以停下來
+        raise SystemExit("個股法人買賣超連續 3 輪都抓不齊，請稍後重跑 run_weekly.py（已抓到的會跳過）")
     run("fetch_us.py")
 
 W = week_end()
