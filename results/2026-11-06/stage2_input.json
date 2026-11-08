@@ -42,7 +42,10 @@
    "https://ww2.money-link.com.tw/TWStock/StockBasic.aspx?SymId=2329",
    "https://www.wantgoo.com/stock/2329/enterprise-growth/net-profit-margin",
    "https://tw.stock.yahoo.com/quote/2329/income-statement",
-   "https://histock.tw/stock/2329/每月營收"
+   "https://histock.tw/stock/2329/每月營收",
+   "https://blog.fugle.tw/post/earnings-call-2329-2026-10-02",
+   "https://blog.fugle.tw/post/earnings-call-2329-2025-06-27",
+   "https://poorstock.com/fund/2329"
   ],
   "eps": [
    [
@@ -60,13 +63,18 @@
    [
     "2025Q4",
     0.61
+   ],
+   [
+    "2025Q3",
+    0.6
+   ],
+   [
+    "2025Q2",
+    0.54
    ]
   ],
-  "unavailable": [
-   "eps_2025Q3",
-   "eps_2025Q2"
-  ],
-  "note": "2026Q3 到 2025Q4 取自財報狗；nStock 的 2026Q3 也是 0.52。2025Q3 與 2025Q2 的單季 EPS 沒查到。stock.wearn 被 robots 擋，goodinfo 抓取失敗，玩股網 EPS 頁未獲存取許可。用 Yahoo 單季淨利依比例推算約為 0.65 和 0.59，但與 Money-Link 的 2025 前三季累計 1.41 對不上，所以不填。"
+  "unavailable": [],
+  "note": "2026Q3 到 2025Q4 取自財報狗；nStock 的 2026Q3 也是 0.52。2025Q3 與 2025Q2 的單季 EPS 沒查到。stock.wearn 被 robots 擋，goodinfo 抓取失敗，玩股網 EPS 頁未獲存取許可。用 Yahoo 單季淨利依比例推算約為 0.65 和 0.59，但與 Money-Link 的 2025 前三季累計 1.41 對不上，所以不填。 [11/8 補查] 2025Q2 0.54 is stated directly by Fugle as the YoY comparison for 2026Q2. 2025Q3 is derived: Poorstock cumulative H1 2025 0.81 and 9M 0.81→1.41 (Money-Link 114.Q3 basic EPS 1.41), so Q3 = 1.41 - 0.81 = 0.60. Check: Fugle 2025Q1 0.27 + Q2 0.54 = 0.81. Goodinfo failed (client_error)."
  },
  "6176": {
   "rev": {
@@ -402,6 +410,10 @@
   "fs_period": null,
   "eps": [
    [
+    "2026Q3",
+    0.95
+   ],
+   [
     "2026Q2",
     0.79
    ],
@@ -420,10 +432,6 @@
    [
     "2025Q2",
     0.47
-   ],
-   [
-    "2025Q1",
-    0.45
    ]
   ],
   "sources": [
@@ -432,10 +440,12 @@
    "https://www.cnyes.com/twstock/news/8099.htm",
    "https://www.nstock.tw/8099",
    "https://ww2.money-link.com.tw/TWStock/StockNews.aspx?SymId=8099",
-   "https://tw.stock.yahoo.com/quote/8099"
+   "https://tw.stock.yahoo.com/quote/8099",
+   "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=952afefa-514a-4380-959a-1bd2998dfca7",
+   "https://tw.stock.yahoo.com/quote/8099.TWO/news"
   ],
   "unavailable": [],
-  "note": "2026Q3 EPS 查不到：nstock 重訊顯示 2026-11-05 董事會已通過 115年Q3 合併財報，但 statementdog/money-link/cnyes/Yahoo 都還沒有 Q3 數字，所以沿用到 2026Q2。statementdog 核對 2026Q2~2025Q3；money-link 累計 2026H1 1.58、2025H1 0.92，和上週值相符。2025Q2、Q1 用上週值。"
+  "note": "2026Q3 EPS 查不到：nstock 重訊顯示 2026-11-05 董事會已通過 115年Q3 合併財報，但 statementdog/money-link/cnyes/Yahoo 都還沒有 Q3 數字，所以沿用到 2026Q2。statementdog 核對 2026Q2~2025Q3；money-link 累計 2026H1 1.58、2025H1 0.92，和上週值相符。2025Q2、Q1 用上週值。 [11/8 補查] Derived. The 11/5 board approval announcement (MoneyDJ) gives 9M cumulative basic EPS 2.53 and parent net income 252,867 thousand. Yahoo's 8/6 announcement gives H1 1.58 and 158,220 thousand. Q3 = 2.53 - 1.58 = 0.95 (net income about 94,647 thousand). The Yahoo announcement page could not be fetched (URL too long)."
  },
  "8422": {
   "fs_period": "115Q3",
@@ -563,13 +573,21 @@
    "https://statementdog.com/analysis/3691",
    "https://ww2.money-link.com.tw/TWStock/StockBasic.aspx?SymId=3691",
    "https://ww2.money-link.com.tw/TWStock/StockNews.aspx?SymId=3691",
-   "https://www.nstock.tw/%E7%A2%A9%E7%A6%BE%E5%81%9A%E4%BB%80%E9%BA%BC.html"
+   "https://www.nstock.tw/%E7%A2%A9%E7%A6%BE%E5%81%9A%E4%BB%80%E9%BA%BC.html",
+   "https://wantrich.chinatimes.com/news/20260313900580-420101",
+   "https://blog.fugle.tw/post/earnings-call-3691-2025-12-22",
+   "https://tw.stock.yahoo.com/quote/3691.TWO/income-statement",
+   "https://www.wantgoo.com/stock/3691/financial-statements/income-statement",
+   "https://poorstock.com/fund/3691",
+   "https://tw.stock.yahoo.com/quote/3691/announcement",
+   "https://www.ctee.com.tw/news/20261103700215-439901",
+   "https://www.nstock.tw/3691"
   ],
   "unavailable": [
    "eps_2025Q2",
    "eps_2025Q1"
   ],
-  "note": "2026Q3 尚未公布：statementdog、money-link、nstock 都沒有 Q3 EPS，也搜不到 Q3 財報新聞。money-link 累計 2026H1 3.34（≈2.97+0.38），2025H1 累計 -7.01；但 2025Q1、Q2 單季仍查不到拆分，所以只列 4 季。"
+  "note": "2026Q3 尚未公布：statementdog、money-link、nstock 都沒有 Q3 EPS，也搜不到 Q3 財報新聞。money-link 累計 2026H1 3.34（≈2.97+0.38），2025H1 累計 -7.01；但 2025Q1、Q2 單季仍查不到拆分，所以只列 4 季。 [11/8 補查] Confirmed figures: 2025 H1 cumulative EPS -7.01 (Money-Link 114.Q2), 9M -8.15 (Fugle), full year -7.62 (Chinatimes and Yahoo announcement), so Q1+Q2 = -7.01. No source found for the separate Q1 and Q2 EPS. The Yahoo/Wantgoo net income of -614,291 and -124,655 thousand includes non-controlling interests: the total of -738.9M is larger than the parent loss of about -643M implied by -7.01 x about 91.8M shares (share count from the 2026Q1 parent net income of 272.57M at EPS 2.97). Dividing Q2 -614.3M by 91.8M shares gives -6.69 (so Q1 -0.32); splitting -7.01 in proportion to net income gives Q2 -5.83 and Q1 -1.18. The difference is large, so these are listed only as estimates (eps_estimate is the proportional split). 2026Q3: as of 11/8 no Q3 report found. Yahoo announcements stop at the 8/13 Q2 report; nStock and ctee (11/3) show only the self-reported September EPS of 0.42 (single month). Deadline 11/14."
  },
  "4966": {
   "rev": {
@@ -1103,7 +1121,12 @@
    "https://www.ctee.com.tw/news/20260805700246-430501",
    "https://uanalyze.com.tw/articles/6888337601",
    "https://in.tradingview.com/symbols/TWSE-3592/financials-earnings/",
-   "https://histock.tw/stock/3592/每月營收"
+   "https://histock.tw/stock/3592/每月營收",
+   "https://tw.stock.yahoo.com/quote/3592.TW/income-statement",
+   "https://poorstock.com/fund/3592",
+   "https://uanalyze.com.tw/articles/9358948042",
+   "https://www.ctee.com.tw/news/20260805700796-430201",
+   "https://news.cnyes.com/news/id/6443712"
   ],
   "eps": [
    [
@@ -1125,10 +1148,14 @@
    [
     "2025Q3",
     4.53
+   ],
+   [
+    "2025Q2",
+    3.51
    ]
   ],
   "unavailable": [],
-  "note": "只有 5 季：2025Q2 單季 EPS 查不到（2025 上半年累計 9.56，但缺 2025Q1，無法相減）。2026Q3=4.11 由 nStock，且與前三季累計 12.46 − 上半年 8.35 吻合；年增 -9.27% 對 2025Q3 4.53 吻合。2025Q4=4.15（全年18.24−前三季14.09）。2026Q2 工商時報寫 4.53、其他來源 4.54，取 4.54。"
+  "note": "只有 5 季：2025Q2 單季 EPS 查不到（2025 上半年累計 9.56，但缺 2025Q1，無法相減）。2026Q3=4.11 由 nStock，且與前三季累計 12.46 − 上半年 8.35 吻合；年增 -9.27% 對 2025Q3 4.53 吻合。2025Q4=4.15（全年18.24−前三季14.09）。2026Q2 工商時報寫 4.53、其他來源 4.54，取 4.54。 [11/8 補查] No page states 2025Q2 single-quarter EPS directly; the figures are derived. Yahoo income statement: 2025Q1 net income 459,117 thousand NTD, Q2 265,866 thousand. Poorstock: 2025 H1 cumulative EPS 9.56. Split in proportion to net income: Q2 = 9.56 x 265,866/724,983 = 3.51, Q1 = 6.05. Implied share count of about 75.84M cross-checks: 2025Q3 343,625 thousand gives 4.53 (udn confirms Q3 4.53 and 9M 14.09), and Q4 314,778 thousand gives 4.15 (uanalyze confirms Q4 4.15, full year 18.24). ctee says Q2 2026 net income rose 29.4% YoY, implying about 3.5 for Q2 2025; cnyes says Q1 2026 fell 36.9% YoY, implying about 6.05 for Q1 2025. Both agree. Wantgoo, Statementdog, Fubon and HiStock EPS pages were blocked or had no EPS."
  },
  "3515": {
   "fs_period": "115Q3",
@@ -1274,22 +1301,22 @@
    ]
   ],
   "ocf": [
+   224448,
    87656,
    15477,
-   303015,
-   39293
+   303015
   ],
   "fcf": [
+   -66143,
    163297,
    -213299,
-   8060,
-   -44938
+   8060
   ],
   "cf_quarters": [
+   "2026Q3",
    "2026Q2",
    "2026Q1",
-   "2025Q4",
-   "2025Q3"
+   "2025Q4"
   ],
   "sources": [
    "https://statementdog.com/analysis/5443/eps",
@@ -1298,10 +1325,12 @@
    "https://histock.tw/stock/5443/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6",
    "https://tw.stock.yahoo.com/quote/5443.TWO/cash-flow-statement",
    "https://statementdog.com/analysis/5443/cash-flow-analysis",
-   "https://histock.tw/stock/5443/%E8%B2%A1%E5%8B%99%E5%A0%B1%E8%A1%A8"
+   "https://histock.tw/stock/5443/%E8%B2%A1%E5%8B%99%E5%A0%B1%E8%A1%A8",
+   "https://histock.tw/stock/financial.aspx?no=5443&st=7",
+   "https://info.ifa.ai/tw-stock/5443"
   ],
   "unavailable": [],
-  "note": "財報狗與玩股網的 EPS 一致。現金流取自 Yahoo，最新只到 2026Q2，所以沒有 2026Q3。Yahoo 頁面的 fcf＝營業＋投資，是單季值。HiStock 現金流量表頁未獲存取許可。"
+  "note": "財報狗與玩股網的 EPS 一致。現金流取自 Yahoo，最新只到 2026Q2，所以沒有 2026Q3。Yahoo 頁面的 fcf＝營業＋投資，是單季值。HiStock 現金流量表頁未獲存取許可。 [11/8 補查] Single-quarter figures from HiStock (thousand NTD). Cross-check: ifa.ai gives 2026 9M cumulative operating cash flow 327,581 and investing -443,726, which equal Q1 15,477 + Q2 87,656 + Q3 224,448 and -228,776 + 75,641 - 290,591. Yahoo shows Q2/Q1 matching HiStock but not yet Q3. nStock: 2026Q3 EPS 1.32 (announced 10/27)."
  },
  "1773": {
   "fs_period": "115Q3",
@@ -1367,9 +1396,16 @@
    "https://finance.yahoo.com/quote/1722.TW/cash-flow/（Yahoo 財經 API，2026-11-07 取得）",
    "https://tw.stock.yahoo.com/quote/1722/eps",
    "https://www.nstock.tw/1722?status=6",
-   "https://histock.tw/stock/1722/財務報表"
+   "https://histock.tw/stock/1722/財務報表",
+   "https://histock.tw/stock/1722/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A5%E5%89%8D%E4%B8%89%E5%AD%A3%E5%90%88%E4%BD%B5%E7%8D%B2%E5%88%A94-52%E5%84%84%E5%85%83-%E6%AF%8F%E8%82%A1%E7%A8%85%E5%BE%8C0-46%E5%85%83-082200440.html",
+   "https://ww2.money-link.com.tw/TWStock/StockBasic.aspx?SymId=1722"
   ],
   "eps": [
+   [
+    "2026Q3",
+    0.03
+   ],
    [
     "2026Q2",
     0.24
@@ -1389,14 +1425,10 @@
    [
     "2025Q2",
     0.44
-   ],
-   [
-    "2025Q1",
-    0.1
    ]
   ],
   "unavailable": [],
-  "note": "2026Q3 尚未公布（Yahoo、nStock 最新皆為 2026Q2，新聞搜尋也無）。兩來源數字一致。"
+  "note": "2026Q3 尚未公布（Yahoo、nStock 最新皆為 2026Q2，新聞搜尋也無）。兩來源數字一致。 [11/8 補查] Published 11/4. 9M cumulative EPS 0.46 (Yahoo/MoneyDJ, parent net income 452,277 thousand) minus H1 0.43 (Money-Link) = 0.03, which matches nStock and HiStock."
  },
  "1605": {
   "fs_period": "115Q3",
@@ -1439,9 +1471,15 @@
    "https://uanalyze.com.tw/articles/9655953020",
    "https://www.wantgoo.com/stock/1605/financial-statements/income-statement",
    "https://www.wantgoo.com/stock/1605/financial-statements/monthly-revenue",
-   "https://histock.tw/stock/financial.aspx?no=1605"
+   "https://histock.tw/stock/financial.aspx?no=1605",
+   "https://udn.com/news/story/7252/9862958",
+   "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=36b68dc9-7500-4abb-b745-75f1593d7e13"
   ],
   "eps": [
+   [
+    "2026Q3",
+    1.78
+   ],
    [
     "2026Q2",
     2.04
@@ -1461,14 +1499,10 @@
    [
     "2025Q2",
     0.12
-   ],
-   [
-    "2025Q1",
-    0.17
    ]
   ],
   "unavailable": [],
-  "note": "2026Q3 尚未公布（nStock 最新 2026Q2，新聞搜尋無 2026Q3）。2026Q2 2.04、上半年 2.85 與優分析 2026/8/7 法說新聞一致；2025Q4 0.23 與優分析新聞標題一致。2026Q2 業外約 85 億挹注。營收 HiStock 與玩股網一致。"
+  "note": "2026Q3 尚未公布（nStock 最新 2026Q2，新聞搜尋無 2026Q3）。2026Q2 2.04、上半年 2.85 與優分析 2026/8/7 法說新聞一致；2025Q4 0.23 與優分析新聞標題一致。2026Q2 業外約 85 億挹注。營收 HiStock 與玩股網一致。 [11/8 補查] Published 11/6. Q3 1.78; 9M cumulative 4.63 (= 0.81 + 2.04 + 1.78)."
  },
  "1477": {
   "rev": {
@@ -1667,7 +1701,9 @@
    "https://www.wantgoo.com/stock/2421/financial-statements/income-statement",
    "https://histock.tw/stock/2421/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6",
    "https://statementdog.com/analysis/2421/monthly-revenue",
-   "https://winvest.tw/News/Detail/93903"
+   "https://winvest.tw/News/Detail/93903",
+   "https://histock.tw/stock/2421/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://tw.stock.yahoo.com/quote/2421.TW/eps/"
   ],
   "eps": [
    [
@@ -1683,6 +1719,10 @@
     2.36
    ],
    [
+    "2025Q4",
+    2.29
+   ],
+   [
     "2025Q3",
     2.55
    ],
@@ -1691,10 +1731,8 @@
     1.37
    ]
   ],
-  "unavailable": [
-   "eps_2025Q4"
-  ],
-  "note": "2026Q3 的 3.14 取自 HiStock 個股頁，頁面只標「Q3」沒寫年度；2025Q3 是 2.55，所以判斷 3.14 是 2026Q3。2026Q2 的 2.42 和上半年累計 4.78 取自 winvest，2026Q1 的 2.36 是累計相減。2025Q3 的 2.55 和 2025 前三季累計 5.65 取自財報狗新聞。2025Q2 的 1.37 是推算值：由 2026Q2 年增 77% 回推，並與上半年累計 3.10 及淨利比例相符。2025Q4 沒查到：findbillion、technews、goodinfo 抓取失敗，財報狗 EPS 頁未獲存取許可。"
+  "unavailable": [],
+  "note": "2026Q3 的 3.14 取自 HiStock 個股頁，頁面只標「Q3」沒寫年度；2025Q3 是 2.55，所以判斷 3.14 是 2026Q3。2026Q2 的 2.42 和上半年累計 4.78 取自 winvest，2026Q1 的 2.36 是累計相減。2025Q3 的 2.55 和 2025 前三季累計 5.65 取自財報狗新聞。2025Q2 的 1.37 是推算值：由 2026Q2 年增 77% 回推，並與上半年累計 3.10 及淨利比例相符。2025Q4 沒查到：findbillion、technews、goodinfo 抓取失敗，財報狗 EPS 頁未獲存取許可。 [11/8 補查] HiStock and Yahoo agree: 2025Q4 2.29, 2025Q1 1.73, 2025 full year 7.94 (1.73+1.37+2.55+2.29). Goodinfo and FindBillion failed (client_error)."
  },
  "2439": {
   "rev": {
@@ -1804,9 +1842,14 @@
    "https://ww2.money-link.com.tw/TWStock/StockBasic.aspx?SymId=1712",
    "https://statementdog.com/analysis/1712/roe-roa",
    "https://statementdog.com/analysis/1712/pe",
-   "https://histock.tw/stock/1712"
+   "https://histock.tw/stock/1712",
+   "https://statementdog.com/analysis/1712/eps"
   ],
   "eps": [
+   [
+    "2026Q3",
+    0.53
+   ],
    [
     "2026Q2",
     0.88
@@ -1826,14 +1869,10 @@
    [
     "2025Q2",
     0.71
-   ],
-   [
-    "2025Q1",
-    0.8
    ]
   ],
   "unavailable": [],
-  "note": "2026Q3 尚未查到：財報狗 ROE 頁已有 2026Q3 欄位，看起來已公布，但 nStock、HiStock、Money-Link、財報狗本益比頁都只列到 2026Q2，Yahoo EPS 頁、HiStock 每股盈餘頁、財報狗 EPS 頁未獲存取許可。因此 EPS 從 2026Q2 往前列。Money-Link 的 2026 上半年累計 EPS 為 1.56，與 0.67+0.88 相符。月營收 2026/07 的 Yahoo 數字與 HiStock 一致。"
+  "note": "2026Q3 尚未查到：財報狗 ROE 頁已有 2026Q3 欄位，看起來已公布，但 nStock、HiStock、Money-Link、財報狗本益比頁都只列到 2026Q2，Yahoo EPS 頁、HiStock 每股盈餘頁、財報狗 EPS 頁未獲存取許可。因此 EPS 從 2026Q2 往前列。Money-Link 的 2026 上半年累計 EPS 為 1.56，與 0.67+0.88 相符。月營收 2026/07 的 Yahoo 數字與 HiStock 一致。 [11/8 補查] Published. nStock and Statementdog both show 2026Q3 0.53 (Q2 0.88, Q1 0.67). Money-Link has not yet updated to Q3 (shows 115.Q2 cumulative 1.56, about 0.67 + 0.88 allowing for rounding). The announcement date was not confirmed."
  },
  "6962": {
   "rev": {
@@ -1880,7 +1919,10 @@
    "https://www.wantgoo.com/stock/6962/enterprise-growth/net-profit-margin",
    "https://histock.tw/stock/6962",
    "https://histock.tw/stock/6962/每月營收",
-   "https://statementdog.com/analysis/6962/pe"
+   "https://statementdog.com/analysis/6962/pe",
+   "https://histock.tw/stock/6962/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://tw.stock.yahoo.com/quote/6962.TW/eps",
+   "https://news.cnyes.com/news/id/6575931"
   ],
   "eps": [
    [
@@ -1902,12 +1944,14 @@
    [
     "2025Q3",
     0.62
+   ],
+   [
+    "2025Q2",
+    0.03
    ]
   ],
-  "unavailable": [
-   "eps_2025Q2"
-  ],
-  "note": "2026Q3 的 0.90 是累計相減的推算值：Money-Link 的 2026Q3 累計基本 EPS 1.51，減去 winvest 的 2026 上半年累計 0.61；若用 Money-Link 按期末股數計算的累計 1.48，結果為 0.87。2026Q2 的 0.03 和上半年累計 0.61 取自 winvest，2026Q1 的 0.58 是累計相減。2025Q4 的 0.27 取自富果法說會整理。2025Q3 的 0.62 和前三季累計 2.60 取自旺得富新聞。2025Q2 沒找到直接數字，所以省略；依 2026Q2 年增 50% 回推約 0.02，玩股網季增率回推約 0.03，兩者不一致。2025 全年 EPS：winvest 與富果為 2.87，Money-Link 為 2.77。8 月營收與 winvest 一致（19.14 億，年增 7.16%）。"
+  "unavailable": [],
+  "note": "2026Q3 的 0.90 是累計相減的推算值：Money-Link 的 2026Q3 累計基本 EPS 1.51，減去 winvest 的 2026 上半年累計 0.61；若用 Money-Link 按期末股數計算的累計 1.48，結果為 0.87。2026Q2 的 0.03 和上半年累計 0.61 取自 winvest，2026Q1 的 0.58 是累計相減。2025Q4 的 0.27 取自富果法說會整理。2025Q3 的 0.62 和前三季累計 2.60 取自旺得富新聞。2025Q2 沒找到直接數字，所以省略；依 2026Q2 年增 50% 回推約 0.02，玩股網季增率回推約 0.03，兩者不一致。2025 全年 EPS：winvest 與富果為 2.87，Money-Link 為 2.77。8 月營收與 winvest 一致（19.14 億，年增 7.16%）。 [11/8 補查] HiStock and Yahoo both show 2025Q2 0.03 (Q1 1.97, Q3 0.62). Cnyes (2026/8/13) says Q2 2026 net income of 14.1M rose 7.7% YoY, implying Q2 2025 net income of about 13.1M, consistent with 0.03. Money-Link 9M 2025 cumulative basic EPS 2.60, against the Q1-Q3 sum of 2.62 (share count changed after the IPO). Do not confuse with 2026Q2, which is also 0.03. The two sources differ on 2025Q4 (HiStock 0.25 / Yahoo 0.28); that quarter is not in scope. Also seen: nStock 11/3 announcement of 2026Q3 EPS 0.9."
  },
  "1723": {
   "fs_period": "115Q3",
