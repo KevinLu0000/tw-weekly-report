@@ -63,9 +63,11 @@ for m in ["L", "O"]:
             assets = num(b.get("資產總計") or b.get("資產總額"))
             liab = num(b.get("負債總計") or b.get("負債總額"))
             if assets and liab is not None: s["debt"] = liab / assets * 100
-            eq = num(b.get("歸屬於母公司業主之權益合計"))
-            ni = num(r.get("淨利（淨損）歸屬於母公司業主"))
-            if eq and ni is not None: s["roe"] = ni * 2 / eq * 100   # 上半年 ×2 年化
+            # ROE 用「近四季」（2026-11-23 使用者確認）：
+            #   ROE ＝ 近四季 EPS ÷ 每股淨值 ＝ 淨值比 ÷ 本益比（兩者都是交易所每天公布的值）
+            #   舊算法「今年累計淨利 × 2」到第 3 季會變成 18 個月的淨利，ROE 被高估，已停用
+            pe, pb = s.get("pe"), s.get("pb")
+            s["roe"] = pb / pe * 100 if pe and pb else None   # 本益比空白＝近四季 EPS ≤ 0，ROE 不算
 
 # ---------- 6. 52 週高低點、近 20 日均量（用每日行情計算，只用到 W 為止）----------
 hist = load_prices(W)

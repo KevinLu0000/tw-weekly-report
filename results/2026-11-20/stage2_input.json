@@ -1042,13 +1042,44 @@
    "202609": [
     204891.0,
     155916.0
+   ],
+   "202608": [
+    146576,
+    141828
    ]
   },
-  "unavailable": [
-   "eps",
-   "rev_202608"
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。",
+  "eps": [
+   [
+    "2026Q3",
+    2.59
+   ],
+   [
+    "2026Q2",
+    2.78
+   ],
+   [
+    "2026Q1",
+    3.38
+   ],
+   [
+    "2025Q4",
+    6.3
+   ],
+   [
+    "2025Q3",
+    2.53
+   ],
+   [
+    "2025Q2",
+    2.64
+   ]
   ],
-  "note": "2026/11/21 試 Yahoo 股市 EPS 頁、HiStock 每月營收／每股盈餘頁、富邦 e 點通，WebFetch 權限請求逾時被擋；證交所 OpenAPI 只有最新一期累計數，無法取得單季歷史與 8 月營收"
+  "sources": [
+   "https://histock.tw/stock/7765/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/7765/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6"
+  ]
  },
  "1712": {
   "rev": {
@@ -1250,6 +1281,10 @@
    "202609": [
     1987823.0,
     1989731.0
+   ],
+   "202608": [
+    1990448,
+    2122871
    ]
   },
   "ocf": [
@@ -1272,13 +1307,38 @@
   ],
   "cf_source": "https://finance.yahoo.com/quote/2010.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
   "sources": [
-   "https://finance.yahoo.com/quote/2010.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）"
+   "https://finance.yahoo.com/quote/2010.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
+   "https://histock.tw/stock/2010/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/2010/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6"
   ],
-  "unavailable": [
-   "eps",
-   "rev_202608"
-  ],
-  "note": "2026/11/21 試 Yahoo 股市 EPS 頁、HiStock 每月營收／每股盈餘頁、富邦 e 點通，WebFetch 權限請求逾時被擋；證交所 OpenAPI 只有最新一期累計數，無法取得單季歷史與 8 月營收"
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。",
+  "eps": [
+   [
+    "2026Q3",
+    0.74
+   ],
+   [
+    "2026Q2",
+    0.78
+   ],
+   [
+    "2026Q1",
+    0.57
+   ],
+   [
+    "2025Q4",
+    0.58
+   ],
+   [
+    "2025Q3",
+    0.57
+   ],
+   [
+    "2025Q2",
+    0.6
+   ]
+  ]
  },
  "1227": {
   "rev": {
@@ -1625,6 +1685,10 @@
    "202609": [
     9012014.0,
     6379096.0
+   ],
+   "202608": [
+    7986073,
+    6459506
    ]
   },
   "ocf": [
@@ -1647,13 +1711,39 @@
   ],
   "cf_source": "https://finance.yahoo.com/quote/3010.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
   "sources": [
-   "https://finance.yahoo.com/quote/3010.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）"
+   "https://finance.yahoo.com/quote/3010.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
+   "https://histock.tw/stock/3010/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/3010/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6",
+   "https://openapi.twse.com.tw/v1/opendata/t187ap06_L_ci"
   ],
-  "unavailable": [
-   "eps",
-   "rev_202608"
-  ],
-  "note": "2026/11/21 試 Yahoo 股市 EPS 頁、HiStock 每月營收／每股盈餘頁、富邦 e 點通，WebFetch 權限請求逾時被擋；證交所 OpenAPI 只有最新一期累計數，無法取得單季歷史與 8 月營收"
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。2026Q3 由證交所 OpenAPI 前三季累計 EPS 減上半年推算。",
+  "eps": [
+   [
+    "2026Q3",
+    3.47
+   ],
+   [
+    "2026Q2",
+    3.46
+   ],
+   [
+    "2026Q1",
+    2.47
+   ],
+   [
+    "2025Q4",
+    2.56
+   ],
+   [
+    "2025Q3",
+    2.69
+   ],
+   [
+    "2025Q2",
+    1.65
+   ]
+  ]
  },
  "8261": {
   "fs_period": "115Q3",
@@ -3001,13 +3091,44 @@
    "202609": [
     8356732.0,
     8015887.0
+   ],
+   "202608": [
+    6996004,
+    6647166
    ]
   },
-  "unavailable": [
-   "eps",
-   "rev_202608"
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。",
+  "eps": [
+   [
+    "2026Q3",
+    2.17
+   ],
+   [
+    "2026Q2",
+    1.7
+   ],
+   [
+    "2026Q1",
+    1.0
+   ],
+   [
+    "2025Q4",
+    2.14
+   ],
+   [
+    "2025Q3",
+    0.85
+   ],
+   [
+    "2025Q2",
+    0.32
+   ]
   ],
-  "note": "2026/11/21 試 Yahoo 股市 EPS 頁、HiStock 每月營收／每股盈餘頁、富邦 e 點通，WebFetch 權限請求逾時被擋；證交所 OpenAPI 只有最新一期累計數，無法取得單季歷史與 8 月營收"
+  "sources": [
+   "https://histock.tw/stock/9933/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/9933/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6"
+  ]
  },
  "2034": {
   "fs_period": "115Q3",
@@ -3866,6 +3987,10 @@
    "202609": [
     777105.0,
     652419.0
+   ],
+   "202608": [
+    798331,
+    639439
    ]
   },
   "ocf": [
@@ -3888,13 +4013,38 @@
   ],
   "cf_source": "https://finance.yahoo.com/quote/8110.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
   "sources": [
-   "https://finance.yahoo.com/quote/8110.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）"
+   "https://finance.yahoo.com/quote/8110.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
+   "https://histock.tw/stock/8110/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/8110/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6"
   ],
-  "unavailable": [
-   "eps",
-   "rev_202608"
-  ],
-  "note": "2026/11/21 試 Yahoo 股市 EPS 頁、HiStock 每月營收／每股盈餘頁、富邦 e 點通，WebFetch 權限請求逾時被擋；證交所 OpenAPI 只有最新一期累計數，無法取得單季歷史與 8 月營收"
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。",
+  "eps": [
+   [
+    "2026Q3",
+    0.01
+   ],
+   [
+    "2026Q2",
+    2.1
+   ],
+   [
+    "2026Q1",
+    0.49
+   ],
+   [
+    "2025Q4",
+    1.19
+   ],
+   [
+    "2025Q3",
+    1.72
+   ],
+   [
+    "2025Q2",
+    -0.65
+   ]
+  ]
  },
  "4105": {
   "rev": {
@@ -4893,6 +5043,10 @@
    "202609": [
     1328203.0,
     805910.0
+   ],
+   "202608": [
+    1311094,
+    709332
    ]
   },
   "ocf": [
@@ -4915,13 +5069,35 @@
   ],
   "cf_source": "https://finance.yahoo.com/quote/2072.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
   "sources": [
-   "https://finance.yahoo.com/quote/2072.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）"
+   "https://finance.yahoo.com/quote/2072.TW/cash-flow/（Yahoo 財經 API，2026-11-21 取得）",
+   "https://histock.tw/stock/2072/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/2072/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6",
+   "https://openapi.twse.com.tw/v1/opendata/t187ap06_L_ci"
   ],
-  "unavailable": [
-   "eps",
-   "rev_202608"
-  ],
-  "note": "2026/11/21 試 Yahoo 股市 EPS 頁、HiStock 每月營收／每股盈餘頁、富邦 e 點通，WebFetch 權限請求逾時被擋；證交所 OpenAPI 只有最新一期累計數，無法取得單季歷史與 8 月營收"
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。2026Q3 由證交所 OpenAPI 前三季累計 EPS 減上半年推算。2025Q3 HiStock 無資料（當時尚未上市）。",
+  "eps": [
+   [
+    "2026Q3",
+    2.81
+   ],
+   [
+    "2026Q2",
+    4.11
+   ],
+   [
+    "2026Q1",
+    5.26
+   ],
+   [
+    "2025Q4",
+    11.94
+   ],
+   [
+    "2025Q2",
+    2.72
+   ]
+  ]
  },
  "6442": {
   "fs_period": "115Q3",
@@ -5140,5 +5316,179 @@
    "https://finance.yahoo.com/quote/2359.TW/cash-flow/（Yahoo 財經 API，2026-11-14 取得）"
   ],
   "fs_period": "115Q3"
+ },
+ "6005": {
+  "fs_period": "115Q3",
+  "rev": {
+   "202610": [
+    1585770.0,
+    1739044.0
+   ],
+   "202609": [
+    2507354.0,
+    1772220.0
+   ],
+   "202608": [
+    3030550,
+    2085061
+   ]
+  },
+  "ocf": [
+   -12243569,
+   -1274177,
+   -5373162,
+   -25840777
+  ],
+  "fcf": [
+   -11990573,
+   -1360065,
+   -5665739,
+   -25706899
+  ],
+  "cf_quarters": [
+   "2026Q3",
+   "2026Q2",
+   "2026Q1",
+   "2025Q4"
+  ],
+  "cf_source": "https://finance.yahoo.com/quote/6005.TW/cash-flow/（Yahoo 財經 API，2026-11-23 取得）",
+  "sources": [
+   "https://finance.yahoo.com/quote/6005.TW/cash-flow/（Yahoo 財經 API，2026-11-23 取得）",
+   "https://histock.tw/stock/6005/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/6005/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6",
+   "https://openapi.twse.com.tw/v1/opendata/t187ap06_L_bd"
+  ],
+  "eps": [
+   [
+    "2026Q3",
+    0.61
+   ],
+   [
+    "2026Q2",
+    2.05
+   ],
+   [
+    "2026Q1",
+    1.34
+   ],
+   [
+    "2025Q4",
+    0.77
+   ],
+   [
+    "2025Q3",
+    0.94
+   ],
+   [
+    "2025Q2",
+    0.46
+   ]
+  ],
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。2026Q3 由證交所 OpenAPI 前三季累計 EPS 減上半年推算。"
+ },
+ "2834": {
+  "fs_period": "115Q3",
+  "rev": {
+   "202610": [
+    2927260.0,
+    2888532.0
+   ],
+   "202609": [
+    3229662.0,
+    3032053.0
+   ]
+  },
+  "ocf": [
+   -918648,
+   36759233,
+   -35340881,
+   58358814
+  ],
+  "fcf": [
+   1556787,
+   -2035180,
+   3662482,
+   303233
+  ],
+  "cf_quarters": [
+   "2026Q1",
+   "2025Q4",
+   "2025Q3",
+   "2025Q2"
+  ],
+  "cf_source": "https://finance.yahoo.com/quote/2834.TW/cash-flow/（Yahoo 財經 API，2026-11-23 取得）",
+  "sources": [
+   "https://finance.yahoo.com/quote/2834.TW/cash-flow/（Yahoo 財經 API，2026-11-23 取得）"
+  ]
+ },
+ "2820": {
+  "fs_period": "115Q3",
+  "rev": {
+   "202610": [
+    256158.0,
+    236710.0
+   ],
+   "202609": [
+    250329.0,
+    264064.0
+   ],
+   "202608": [
+    365936,
+    236585
+   ]
+  },
+  "ocf": [
+   470854,
+   5526461,
+   -12075654,
+   20080
+  ],
+  "fcf": [
+   464890,
+   5543660,
+   -12103236,
+   18744
+  ],
+  "cf_quarters": [
+   "2026Q1",
+   "2025Q4",
+   "2025Q3",
+   "2025Q2"
+  ],
+  "cf_source": "https://finance.yahoo.com/quote/2820.TW/cash-flow/（Yahoo 財經 API，2026-11-23 取得）",
+  "sources": [
+   "https://finance.yahoo.com/quote/2820.TW/cash-flow/（Yahoo 財經 API，2026-11-23 取得）",
+   "https://histock.tw/stock/2820/%E6%AF%8F%E8%82%A1%E7%9B%88%E9%A4%98",
+   "https://histock.tw/stock/2820/%E6%AF%8F%E6%9C%88%E7%87%9F%E6%94%B6"
+  ],
+  "eps": [
+   [
+    "2026Q3",
+    0.42
+   ],
+   [
+    "2026Q2",
+    0.59
+   ],
+   [
+    "2026Q1",
+    0.48
+   ],
+   [
+    "2025Q4",
+    0.29
+   ],
+   [
+    "2025Q3",
+    0.33
+   ],
+   [
+    "2025Q2",
+    0.42
+   ]
+  ],
+  "unavailable": [],
+  "note": "2026/11/23 補查：HiStock 單季 EPS 與 8 月營收。"
  }
 }
